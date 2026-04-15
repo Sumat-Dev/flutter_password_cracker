@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="banner.png" alt="Flutter + Rust Password Cracker Banner" width="100%">
+</p>
+
+![Flutter + Rust Password Cracker Banner](banner.png)
+
 # Flutter password cracker (Rust)
 
 A proof-of-concept app that demonstrates native Rust integration for CPU-intensive cryptographic tasks, with real-time streaming updates back to the Flutter UI.
@@ -46,11 +52,10 @@ flutter_password_cracker/
 │   │   └── crack_screen.dart            # Main UI screen
 │   ├── widgets/
 │   │   └── crack_progress_widget.dart   # Live stats + terminal log
-│   └── src/
-│       └── rust/
-│           ├── frb_generated.dart       # Auto-generated bridge (do not edit)
-│           ├── frb_generated.io.dart    # Native platform impl
-│           └── frb_generated.web.dart  # Web platform impl
+│   └── rust/
+│       ├── frb_generated.dart           # Auto-generated bridge (do not edit)
+│       ├── frb_generated.io.dart        # Native platform impl
+│       └── frb_generated.web.dart       # Web platform impl
 │
 ├── rust/
 │   ├── Cargo.toml                       # Rust dependencies
@@ -58,10 +63,10 @@ flutter_password_cracker/
 │       ├── lib.rs                       # Crate root, exposes `api` module
 │       ├── api/
 │       │   └── mod.rs                   # Public bridge functions
-│       └── frb_generated.rs            # Auto-generated Rust glue (do not edit)
+│       └── frb_generated.rs             # Auto-generated Rust glue (do not edit)
 │
-├── flutter_rust_bridge.yaml            # Codegen config
-├── pubspec.yaml                        # Flutter dependencies
+├── flutter_rust_bridge.yaml             # Codegen config
+├── pubspec.yaml                         # Flutter dependencies
 └── README.md
 ```
 
@@ -118,9 +123,9 @@ flutter_rust_bridge_codegen generate
 The config in `flutter_rust_bridge.yaml` points codegen at the right files automatically:
 
 ```yaml
-rust_input: crate::api
-rust_root: rust/
-dart_output: lib/src/rust/
+rust_input: rust/src/api/mod.rs
+rust_root: rust
+dart_output: lib/rust
 ```
 
 ---
