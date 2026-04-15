@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_password_cracker/rust/frb_generated.dart';
+import 'package:flutter_password_cracker/bridge/native/frb_generated.dart';
 import 'package:flutter_password_cracker/screens/crack_screen.dart';
 
 Future<void> main() async {

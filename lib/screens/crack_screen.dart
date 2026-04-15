@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_password_cracker/rust/api.dart';
+import 'package:flutter_password_cracker/bridge/native/api.dart';
 import 'package:flutter_password_cracker/widgets/crack_progress_widget.dart';
 
 class CrackScreen extends StatefulWidget {

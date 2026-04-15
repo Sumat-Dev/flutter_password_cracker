@@ -52,11 +52,11 @@ flutter_password_cracker/
 │   │   └── crack_screen.dart            # Main UI screen
 │   ├── widgets/
 │   │   └── crack_progress_widget.dart   # Live stats + terminal log
-│   └── src/
-│       └── rust/
-│           ├── frb_generated.dart       # Auto-generated bridge (do not edit)
-│           ├── frb_generated.io.dart    # Native platform impl
-│           └── frb_generated.web.dart   # Web platform impl
+│   └── bridge/native/
+│       ├── api.dart  
+│       ├── frb_generated.dart           # Auto-generated bridge (do not edit)
+│       ├── frb_generated.io.dart        # Native platform impl
+│       └── frb_generated.web.dart       # Web platform impl
 │
 ├── rust/
 │   ├── Cargo.toml                       # Rust dependencies
@@ -66,7 +66,6 @@ flutter_password_cracker/
 │       │   └── mod.rs                   # Public bridge functions
 │       └── frb_generated.rs             # Auto-generated Rust glue (do not edit)
 │
-├── flutter_rust_bridge.yaml             # Codegen config
 ├── pubspec.yaml                         # Flutter dependencies
 └── README.md
 ```

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_password_cracker/rust/api.dart';
+import 'package:flutter_password_cracker/bridge/native/api.dart';
 
 class CrackProgressWidget extends StatelessWidget {
   final CrackProgress? progress;
