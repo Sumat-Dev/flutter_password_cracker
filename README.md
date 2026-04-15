@@ -1,6 +1,6 @@
 # Flutter password cracker (Rust)
 
-<img src="banner.png" alt="Flutter + Rust Password Cracker Banner" width="50%">
+<img src="banner.png" alt="Flutter + Rust Password Cracker Banner" width="100%">
 
 A proof-of-concept app that demonstrates native Rust integration for CPU-intensive cryptographic
 tasks, with real-time streaming updates back to the Flutter UI.
@@ -12,7 +12,7 @@ tasks, with real-time streaming updates back to the Flutter UI.
 
 ## Features
 
-<img src="screenshot.png" alt="App Screenshot" width="300">
+<img src="screenshot.png" alt="App Screenshot" width="200">
 
 - **SHA-256 hashing** — synchronous Rust call via FFI, returns instantly
   (การ Hash SHA-256 ผ่าน Rust FFI ทำงานได้รวดเร็วทันที)
