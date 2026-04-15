@@ -1,16 +1,18 @@
 # Flutter password cracker (Rust)
 
-<p align="center">
-  <img src="banner.png" alt="Flutter + Rust Password Cracker Banner" width="50%">
-</p>
+<img src="banner.png" alt="Flutter + Rust Password Cracker Banner" width="50%">
 
-A proof-of-concept app that demonstrates native Rust integration for CPU-intensive cryptographic tasks, with real-time streaming updates back to the Flutter UI.
+A proof-of-concept app that demonstrates native Rust integration for CPU-intensive cryptographic
+tasks, with real-time streaming updates back to the Flutter UI.
 
-(เป็นแอปตัวอย่างการผสานรวม Rust เพื่อประมวลผลงาน Crypto ที่ใช้ CPU สูง พร้อมส่งข้อมูลแบบ Real-time กลับมายัง UI)
+(แอปตัวอย่างการผสานรวม Rust เพื่อประมวลผลงาน Crypto ที่ใช้ CPU สูง พร้อมส่งข้อมูลแบบ Real-time
+กลับมายัง UI)
 
 ---
 
 ## Features
+
+<img src="screenshot.png" alt="App Screenshot" width="300">
 
 - **SHA-256 hashing** — synchronous Rust call via FFI, returns instantly
   (การ Hash SHA-256 ผ่าน Rust FFI ทำงานได้รวดเร็วทันที)
@@ -185,9 +187,11 @@ pub struct CrackProgress {
 
 - Rust SHA-256 via `sha2` is typically **10–20x faster** than a pure Dart implementation
   (Rust SHA-256 เร็วกว่า Dart ประมาณ 10-20 เท่า)
-- `rayon` automatically scales to the number of logical CPU cores — no manual thread management needed
+- `rayon` automatically scales to the number of logical CPU cores — no manual thread management
+  needed
   (`rayon` ปรับสเกลตามจำนวน Core ของ CPU โดยอัตโนมัติ)
-- The `StreamSink` emits every 50,000 attempts to balance UI responsiveness against FFI call overhead
+- The `StreamSink` emits every 50,000 attempts to balance UI responsiveness against FFI call
+  overhead
   (ส่งข้อมูลกลับทุกๆ 50,000 ครั้งเพื่อความสมดุลระหว่างความลื่นของ UI และ Overhead ของ FFI)
 - Keep demo passwords at **3–5 characters** (`a–z` only)
   (แนะนำให้ทดสอบรหัสผ่านความยาว 3-5 ตัวอักษร)

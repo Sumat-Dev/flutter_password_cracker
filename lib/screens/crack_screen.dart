@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../src/rust/api.dart';
-import '../widgets/crack_progress_widget.dart';
+import 'package:flutter_password_cracker/rust/api.dart';
+import 'package:flutter_password_cracker/widgets/crack_progress_widget.dart';
 
 class CrackScreen extends StatefulWidget {
   const CrackScreen({super.key});
@@ -43,24 +43,23 @@ class _CrackScreenState extends State<CrackScreen> {
     });
 
     // Step 2 — stream crack progress
-    bruteForceCrack(targetHash: hash)
-        .listen(
-          (progress) {
-            if (!mounted) return;
-            setState(() {
-              _latest = progress;
-              if (progress.isFound) {
-                _running = false;
-                _found = true;
-              }
-            });
-          },
-          onError: (e) {
-            if (!mounted) return;
-            setState(() => _running = false);
-            _showSnack('Error: $e');
-          },
-        );
+    bruteForceCrack(targetHash: hash).listen(
+      (progress) {
+        if (!mounted) return;
+        setState(() {
+          _latest = progress;
+          if (progress.isFound) {
+            _running = false;
+            _found = true;
+          }
+        });
+      },
+      onError: (e) {
+        if (!mounted) return;
+        setState(() => _running = false);
+        _showSnack('Error: $e');
+      },
+    );
   }
 
   void _reset() {
