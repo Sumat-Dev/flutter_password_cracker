@@ -1,10 +1,8 @@
-<p align="center">
-  <img src="banner.png" alt="Flutter + Rust Password Cracker Banner" width="100%">
-</p>
-
-![Flutter + Rust Password Cracker Banner](banner.png)
-
 # Flutter password cracker (Rust)
+
+<p align="center">
+  <img src="banner.png" alt="Flutter + Rust Password Cracker Banner" width="50%">
+</p>
 
 A proof-of-concept app that demonstrates native Rust integration for CPU-intensive cryptographic tasks, with real-time streaming updates back to the Flutter UI.
 
